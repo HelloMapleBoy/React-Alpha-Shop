@@ -1,0 +1,53 @@
+.section {
+  margin-top: 30px;
+  .container {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 10px;
+    grid-template-areas:
+    "name name"
+    "number number"
+    "valid cvc_ccv";
+    .name {
+      grid-area: name;
+    }
+    .number {
+      grid-area: number;
+    }
+    .valid {
+      grid-area: valid;
+    }
+    .cvc_ccv {
+      grid-area: cvc_ccv;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+  }
+  input[type="text"] {
+    appearance: none;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 0.5em;
+    width: 100%;
+    background-color: transparent;
+    &:hover,
+    &:focus {
+      border-color: var(--input-border);
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .section {
+    all: unset;
+    grid-column: 1 / 2;
+    margin-bottom: 20px;
+  }
+}

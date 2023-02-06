@@ -1,0 +1,43 @@
+.section {
+  margin-top: 30px;
+  .container {
+    margin: 20px 0;
+    .shipping__container {
+      display: flex;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      padding: 0.5em;
+      margin-top: 16px;
+      align-items: center;
+      &:hover {
+        border-color: var(--input-border);
+      }
+      .shipping__label {
+        width: 100%;
+        margin: 0 16px;
+        .shipping {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      input[type="radio"] {
+        appearance: none;
+        border: 1px solid var(--border-color);
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        cursor: pointer;
+        &:checked {
+          box-shadow: inset 0 0 0 5px var(--grey-800);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .section {
+    all: unset;
+    grid-column: 1 / 2;
+  }
+}

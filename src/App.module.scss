@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&family=Roboto&display=swap');
+
+
+:root {
+  --white: #FFFFFF;
+  --pink: #F67599;
+  --grey-800: #2A2A2A;
+  --grey-700: #333333;
+  --grey-400: #808080;
+  --grey-300: #999999;
+
+  --site-edge-margin: 15px;
+
+  --main-font-family: 'Noto Sans TC', sans-serif;
+
+
+  --background-color: #FFFFFF;
+  --footer-background-color: #F6F7F8;
+  --nav-icon: #2A2A2A;
+  --social-icon: #808080;
+  --main-text: #2A2A2A;
+  --secondary-text: #808080;
+  --active-color: lightblue;
+
+  --undone-progress-border: #F0F0F5;
+  --done-progress-border: #000000;
+  --progress-current-color: #2A2A2A;
+  --progress-done-color: #FFFFFF;
+  --progress-undone-color: #AFB1BD;
+  --pg-addr-color: #FFFFFF;
+  --pg-addr-bg-color: #2A2A2A;
+  --input-label: #808080;
+  --input-border: #4A4A4A;
+  --input-text: #999999;
+  --select-arrow: #2A2A2A;
+  --select-true: #2A2A2A;
+  --select-false: #999999;
+  --product-action-text: #000000;
+  --product-action-bg: #F0F0F5;
+  --left-arrow: #000000;
+  --border-color: #e5e5e5;
+
+  background-color: var(--background-color);
+  color: var(--main-text);
+  font-family: var(--main-font-family);
+  font-size: 16px;
+  user-select: none;
+}
+
+// [data-theme='dark'] {
+//   --white: #FFFFFF;
+//   --pink: #F67599;
+//   --grey-800: #2A2A2A;
+//   --grey-700: #333333;
+//   --grey-400: #808080;
+//   --grey-300: #999999;
+
+//   --site-edge-margin: 15px;
+
+//   --main-font-family: 'Noto Sans TC', sans-serif;
+
+//   --background-color: #121212;
+//   --footer-background-color: #333333;
+//   --nav-icon: rgba(255, 255, 255, 0.8);
+//   --social-icon: rgba(255, 255, 255, 0.5);
+//   --main-text: #FFFFFF;
+//   --secondary-text: rgba(255, 255, 255, 0.6);
+
+//   --undone-progress-border: rgba(240, 240, 245, 0.4);
+//   --done-progress-border: #FFFFFF;
+//   --progress-current-color: #FFFFFF;
+//   --progress-done-color: #FFFFFF;
+//   --progress-undone-color: #717171;
+//   --pg-addr-color: #FFFFFF;
+//   --pg-addr-bg-color: #333333;
+//   --input-label: rgba(255, 255, 255, 0.4);
+//   --input-border: #5E5E5E;
+//   --input-text: rgba(255, 255, 255, 0.3);
+//   --select-arrow: #5E5E5E;
+//   --select-true: #FFFFFF;
+//   --select-false: rgba(255, 255, 255, 0.3);
+//   --product-action-text: #333333;
+//   --product-action-bg: #808080;
+//   --left-arrow: #FFFFFF;
+//   --border-color: #e5e5e5;
+
+//   background-color: var(--background-color);
+//   color: var(--main-text);
+//   font-family: var(--main-font-family);
+//   font-size: 16px;
+//   user-select: none;
+// }

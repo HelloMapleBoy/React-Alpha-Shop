@@ -1,0 +1,78 @@
+.section {
+  padding-top: 70px;
+  .container {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    .Progressbar {
+      display: block;
+      height: 2px;
+      background-color: var(--border-color);
+      width: 100px;
+      margin: 0 10px;
+    }
+    .ProgressCurrent {
+      display: block;
+      height: 2px;
+      background-color: var(--progress-current-color);
+      width: 100px;
+      margin: 0 10px;
+    }
+    .step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      .circle {
+        height: 24px;
+        width: 24px;
+        background-color: var(--progress-done-color);
+        border: 1px solid var(--progress-undone-color);
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      .circleCurrent {
+        height: 24px;
+        width: 24px;
+        background-color: var(--grey-800);
+        color: white;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      .label {
+        display: none;
+        color: var(--progress-undone-color);
+      }
+      .labelCurrent {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .section {
+    padding-top: 30px;
+    .container {
+      margin-top: 25px;
+      .line {
+        width: 60px;
+      }
+      .step {
+        display: flex;
+        justify-content: center;
+        .circle {
+          margin: 0px;
+          margin-right: 5px; 
+        }
+        .label {
+          display: flex;
+        }
+        .labelCurrent {
+          all: unset;
+          color: var(--main-text);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
