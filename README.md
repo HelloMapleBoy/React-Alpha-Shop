@@ -20,16 +20,13 @@
 
    ```
    https://github.com/HelloMapleBoy/ALPHA-Shop.git
-
    ```
 
 2. 執行專案，輸入：
 
    ```
    npm start
-
    npm install node-sass
-
    ```
 
 3. 瀏覽器 "http://localhost:3000" ，可瀏覽此專案。
