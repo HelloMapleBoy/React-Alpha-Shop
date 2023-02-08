@@ -1,6 +1,6 @@
 # Alpha Shop - React
 
-![Screenshot from index page ](./src/assets/images/Alpha-Shop.png)
+![Screenshot from index page ](./src/assets/Images/Alpha-Shop.png)
 
 ![Screenshot from index page ](./src/assets/Images/Alpha-Shop-RWD.png)
 
