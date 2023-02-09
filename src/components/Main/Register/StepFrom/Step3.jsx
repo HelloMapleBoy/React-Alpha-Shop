@@ -6,7 +6,7 @@ import classes from "./Step3.module.scss";
 const Step3 = () => {
   const { register, setRegister } = useContext(RegisterContext);
 
-  const changeInpurValue = (e) => {
+  const changeInputValue = (e) => {
     setRegister({
       ...register,
       [e.target.name]: e.target.value,
@@ -23,7 +23,7 @@ const Step3 = () => {
           <InputGroup
             label="持卡人姓名"
             placeholder="John Doe"
-            onChange={changeInpurValue}
+            onChange={changeInputValue}
             name="creditName"
           />
         </div>
@@ -31,7 +31,7 @@ const Step3 = () => {
           <InputGroup
             label="卡號"
             placeholder="1111 2222 3333 4444"
-            onChange={changeInpurValue}
+            onChange={changeInputValue}
             name="creditNumber"
           />
         </div>
@@ -39,7 +39,7 @@ const Step3 = () => {
           <InputGroup
             label="有效期限"
             placeholder="MM/YY"
-            onChange={changeInpurValue}
+            onChange={changeInputValue}
             name="creditExp"
           />
         </div>
@@ -47,7 +47,7 @@ const Step3 = () => {
           <InputGroup
             label="CVC/CCV"
             placeholder="123"
-            onChange={changeInpurValue}
+            onChange={changeInputValue}
             name="creditCCV"
           />
         </div>

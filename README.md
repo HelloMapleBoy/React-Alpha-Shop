@@ -13,6 +13,7 @@
 - Header
 - Main (Register & Cart)
 - Footer
+- RWD
 
 ### 使用指南
 

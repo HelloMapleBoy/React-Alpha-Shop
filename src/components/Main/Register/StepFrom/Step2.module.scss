@@ -1,15 +1,19 @@
 .section {
   margin-top: 30px;
   .container {
-    margin: 20px 0;
+    margin: 20px 0; 
     .shipping__container {
       display: flex;
+      appearance: none;
       border: 1px solid var(--border-color);
       border-radius: 5px;
       padding: 0.5em;
       margin-top: 16px;
       align-items: center;
-      &:hover {
+      // border: 3px solid black;
+      &:hover,
+      &:focus-within
+       {
         border-color: var(--input-border);
       }
       .shipping__label {

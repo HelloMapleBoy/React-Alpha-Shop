@@ -17,7 +17,7 @@ const CartInfo = ({ text, amount }) => {
 const Card = () => {
   const { products, setProducts } = useContext(CardContext);
 
-  const additemHandler = (productId) => {
+  const addItemHandler = (productId) => {
     let newProducts = products.map((product) => {
       if (product.id === productId) {
         return {
@@ -31,7 +31,7 @@ const Card = () => {
     setProducts(newProducts);
   };
 
-  const reduceitemsHandler = (productId) => {
+  const reduceItemsHandler = (productId) => {
     let newProducts = products.map((product) => {
       if (product.id === productId) {
         return {
@@ -67,12 +67,12 @@ const Card = () => {
             <div className={classes.cardCount}>
               <Minus
                 className={classes.minus}
-                onClick={() => reduceitemsHandler(id)}
+                onClick={() => reduceItemsHandler(id)}
               />
               <span>{quantity}</span>
               <Plus
                 className={classes.plus}
-                onClick={() => additemHandler(id)}
+                onClick={() => addItemHandler(id)}
               />
             </div>
           </div>
