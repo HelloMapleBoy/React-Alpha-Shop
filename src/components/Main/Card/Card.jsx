@@ -17,26 +17,51 @@ const CartInfo = ({ text, amount }) => {
 const Card = () => {
   const { products, setProducts } = useContext(CardContext);
 
-  const addItemHandler = (productId) => {
-    let newProducts = products.map((product) => {
-      if (product.id === productId) {
-        return {
-          ...product,
-          quantity: product.quantity + 1,
-        };
-      } else {
-        return product;
-      }
+  // const addItemHandler = (productId) => {
+  //   let newProducts = products.map((product) => {
+  //     if (product.id === productId) {
+  //       return {
+  //         ...product,
+  //         quantity: product.quantity + 1,
+  //       };
+  //     } else {
+  //       return product;
+  //     }
+  //   });
+  //   setProducts(newProducts);
+  // };
+
+  // const reduceItemsHandler = (productId) => {
+  //   let newProducts = products.map((product) => {
+  //     if (product.id === productId) {
+  //       return {
+  //         ...product,
+  //         quantity: product.quantity - 1,
+  //       };
+  //     } else {
+  //       return product;
+  //     }
+  //   });
+  //   newProducts = newProducts.filter((product) => product.quantity > 0);
+  //   setProducts(newProducts);
+  // };
+
+  const totalPrice = (products) => {
+    let total = 0;
+    products.forEach((product) => {
+      total += product.price * product.quantity;
     });
-    setProducts(newProducts);
+    return total;
   };
 
-  const reduceItemsHandler = (productId) => {
+  // 助教優化+-處理器
+  const itemHandler = (productId, action) => {
     let newProducts = products.map((product) => {
       if (product.id === productId) {
         return {
           ...product,
-          quantity: product.quantity - 1,
+          quantity:
+            action === "Minus" ? product.quantity - 1 : product.quantity + 1,
         };
       } else {
         return product;
@@ -44,15 +69,6 @@ const Card = () => {
     });
     newProducts = newProducts.filter((product) => product.quantity > 0);
     setProducts(newProducts);
-  };
-
-  const totalPrice = (products) => {
-    let total = 0;
-    products.forEach((product) => {
-      total += product.price * product.quantity;
-    });
-
-    return total;
   };
 
   const CardItem = ({ id, name, img, price, quantity }) => {
@@ -67,12 +83,12 @@ const Card = () => {
             <div className={classes.cardCount}>
               <Minus
                 className={classes.minus}
-                onClick={() => reduceItemsHandler(id)}
+                onClick={() => itemHandler(id, "Minus")}
               />
               <span>{quantity}</span>
               <Plus
                 className={classes.plus}
-                onClick={() => addItemHandler(id)}
+                onClick={() => itemHandler(id, "Plus")}
               />
             </div>
           </div>

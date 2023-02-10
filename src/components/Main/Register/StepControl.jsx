@@ -3,6 +3,15 @@ import { ReactComponent as RightArrow } from "../../../assets/Icons/right-arrow.
 import classes from "./StepControl.module.scss";
 
 const StepControl = ({ currentClick, prevClick, nextClick, confirmClick }) => {
+  // const Button = ({ prevClick, text }) => {
+  //   return (
+  //     <button onClick={prevClick} disabled>
+  //       <LeftArrow disabled />
+  //       {text}
+  //       <RightArrow />
+  //     </button>
+  //   );
+  // };
   return (
     <section className={classes.section}>
       <div className={classes.container}>
